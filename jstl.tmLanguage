@@ -20,7 +20,7 @@
 			<key>name</key>
 			<string>meta.attribute-selector.css.jsp</string>
 			<key>match</key>
-			<string>((&lt;(c|spring|cms|ycommerce):.*?)(\ |&gt;))|(&lt;\/(c|spring|cms|ycommerce):.*?&gt;)</string>
+			<string>((&lt;(c|spring|cms|ycommerce|fmt|fn):.*?)(?=(\ |&gt;|\()))|(&lt;\/(c|spring|cms|ycommerce|fmt):.*?&gt;)</string>
 		</dict>
 		<dict>
 			<key>name</key>
