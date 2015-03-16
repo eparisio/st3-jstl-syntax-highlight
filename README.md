@@ -1,7 +1,7 @@
 # sublime text 3 jsp syntax
 Base support for sublime text 3 jsp syntax
 
-To make it works now you need to edit the color reference to your color-scheme for the jsp syntax represented by the first four <dict> tag
+To make it works now you need to edit the color reference to your color-scheme for the jsp syntax represented by the first four ```<dict>``` tag
 
 ### TO DO:
 * add support for all jsp tag
