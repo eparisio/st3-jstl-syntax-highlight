@@ -8,7 +8,7 @@ Based on original Java Server Page(JSP) syntax highlight.
 * tag
 
 #### develop note:
-* highlight __all__ jstl base tags(<xxx:xxx>), parameter in the tag(xxx=") and server variable(${})
+* highlight __all__ jstl base tags(```<xxx:xxx>```), parameter in the tag(```xxx="```) and server variable(```${}```)
 * ~~add support for all jstl tag~~ - added general regex for __jstl tags and custom tags__
 
 ### TO DO:
