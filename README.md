@@ -1,9 +1,10 @@
 # sublime text 3 jsp syntax
 Basic support for sublime text 3 jsp syntax
 
-To make it works now you need to edit the color reference to your color-scheme for the jsp syntax represented by the first four ```<dict>``` tag
+* ~~add support for all jsp tag~~
+added general regex
 
 ### TO DO:
-* add support for all jsp tag
+* ~~add support for all jsp tag~~
 * review regex for end-self-closing tag with parameter
 * ovverride html syntax color in normal html tag for server variable
