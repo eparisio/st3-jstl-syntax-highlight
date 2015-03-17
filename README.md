@@ -1,8 +1,7 @@
 # sublime text 3 jsp syntax
 Basic support for sublime text 3 jsp syntax
 
-* ~~add support for all jsp tag~~
-added general regex
+* ~~add support for all jsp tag~~ - added general regex for tags
 
 ### TO DO:
 * ~~add support for all jsp tag~~
