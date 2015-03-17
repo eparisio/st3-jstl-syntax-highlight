@@ -1,5 +1,5 @@
-# sublime text 3 jsp syntax
-Basic support for sublime text 3 jstl syntax hightlight
+# sublime text 3 jsp syntax highlight
+Basic support for sublime text 3 jstl syntax highlight
 
 * ~~add support for all jsp tag~~ - added general regex for tags
 
