@@ -5,6 +5,8 @@
 	<key>fileTypes</key>
 	<array>
 		<string>jstl</string>
+		<string>jsp</string>
+		<string>tag</string>
 	</array>
 	<key>foldingStartMarker</key>
 	<string>/\*\*|\{\s*$</string>
