@@ -6,4 +6,4 @@ Basic support for sublime text 3 jsp syntax
 ### TO DO:
 * ~~add support for all jsp tag~~
 * review regex for end-closing tag with parameter
-* ovverride html syntax color in normal html tag for server variable
+* ovverride html syntax color in normal html tag for nested tags/server var
