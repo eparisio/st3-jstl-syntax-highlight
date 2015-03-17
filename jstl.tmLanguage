@@ -16,30 +16,46 @@
 	<string>JSTL</string>
 	<key>patterns</key>
 	<array>
+		<!-- jstl (all) tags -->
 		<dict>
 			<key>name</key>
-			<string>meta.attribute-selector.css.jsp</string>
+			<string>support.function.jsp</string>
 			<key>match</key>
-			<string>((&lt;(c|spring|cms|ycommerce|fmt|fn):.*?)(?=(\ |&gt;|\()))|(&lt;\/(c|spring|cms|ycommerce|fmt):.*?&gt;)</string>
+			<string>(&lt;[a-zA-Z0-9^\ ]*?:.*?(\ |&gt;))|(&lt;\/[a-zA-Z0-9^\ ]*?:.*?&gt;)</string>
 		</dict>
+		<!-- jstl tags attributes-->
 		<dict>
 			<key>name</key>
-			<string>entity.other.attribute-name.class.jsp</string>
+			<string>entity.name.class.jsp</string>
 			<key>match</key>
-			<string>(test|var|value|code|items|varStatus|[a-zA-Z]*)(?=(=("|')))</string>
+			<string>([a-zA-Z0-9]*)(?=(=("|')))</string>
 		</dict>
+		<!-- jstl server variables-->
 		<dict>
 			<key>name</key>
-			<string>sublimelinter.mark.warning.jsp</string>
+			<string>variable.parameter.jsp</string>
 			<key>match</key>
 			<string>\${.*?}</string>
 		</dict>
-		<dict>
+		<!-- <dict>
+			<key>begin</key>
+			<string>((&lt;(c|spring|cms|ycommerce|fmt|fn):.*?)(?=(\ |&gt;|\()))|(&lt;\/(c|spring|cms|ycommerce|fmt):.*?&gt;)</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>meta.attribute-selector.css.jsp</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\/&gt;</string>
 			<key>name</key>
-			<string>sublimelinter.mark.warning.jsp</string>
-			<key>match</key>
-			<string>(&lt;[a-zA-Z0-9^\ ]*?:.*?(\ |&gt;))</string>
-		</dict>
+			<string>meta.attribute-selector.css.jsp</string>
+		</dict> -->
+
+
+
 
 
 
