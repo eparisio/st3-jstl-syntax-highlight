@@ -21,16 +21,9 @@
 		<!-- jstl (all) tags -->
 		<dict>
 			<key>name</key>
-			<string>support.function.jsp</string>
+			<string>support.constant.jsp</string>
 			<key>match</key>
-			<string>(&lt;[a-zA-Z0-9^\ ]*?:.*?(\ |&gt;))|(&lt;\/[a-zA-Z0-9^\ ]*?:.*?&gt;)</string>
-		</dict>
-		<!-- jstl tags attributes-->
-		<dict>
-			<key>name</key>
-			<string>entity.name.class.jsp</string>
-			<key>match</key>
-			<string>([a-zA-Z0-9]*)(?=(=("|')))</string>
+			<string>(&lt;)(\/)([a-zA-Z0-9^\ ]*?)(:.*?)(&gt;)</string>
 		</dict>
 		<!-- jstl server variables-->
 		<dict>
@@ -39,22 +32,57 @@
 			<key>match</key>
 			<string>\${.*?}</string>
 		</dict>
-		<!-- <dict>
+		<dict>
 			<key>begin</key>
-			<string>((&lt;(c|spring|cms|ycommerce|fmt|fn):.*?)(?=(\ |&gt;|\()))|(&lt;\/(c|spring|cms|ycommerce|fmt):.*?&gt;)</string>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
+			<string>(&lt;)([a-zA-Z0-9]*?)(:.*?)</string>
+			<key>end</key>
+			<string>\/&gt;|&gt;</string>
+			<key>name</key>
+			<string>support.constant.jsp</string>
+			<key>patterns</key>
+			<array>
+				<!-- jstl tags attributes-->
 				<dict>
 					<key>name</key>
-					<string>meta.attribute-selector.css.jsp</string>
+					<string>entity.other.inherited-class.jsp</string>
+					<key>match</key>
+					<string>([a-zA-Z0-9-]*)(?=(=("|')))</string>
 				</dict>
-			</dict>
-			<key>end</key>
-			<string>\/&gt;</string>
-			<key>name</key>
-			<string>meta.attribute-selector.css.jsp</string>
-		</dict> -->
+				<!-- jstl costant inside tags-->
+				<dict>
+					<key>name</key>
+					<string>string.jsp</string>
+					<key>match</key>
+					<string>=</string>
+				</dict>
+				<!-- jstl text inside attributs-->
+				<dict>
+					<key>begin</key>
+					<string>"</string>
+					<key>end</key>
+					<string>"</string>
+					<key>name</key>
+					<string>string.jsp</string>
+					<key>patterns</key>
+					<array>
+						<!-- jstl operation inside tag-->
+						<dict>
+							<key>name</key>
+							<string>variable.parameter.jsp</string>
+							<key>match</key>
+							<string>\${.*?}</string>
+						</dict>
+					</array>
+				</dict>
+				<!-- jstl server variables-->
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.jsp</string>
+					<key>match</key>
+					<string>\${.*?}</string>
+				</dict>
+			</array>
+		</dict>
 
 
 
