@@ -15,5 +15,5 @@ Based on original Java Server Page(JSP) syntax highlight.
 ### TO DO:
 * ~~add support for all jstl tag~~
 * ~~review regex for highlight end-closing tag with parameter~~
-* add highlight for jstl operation (and,or,<,>,eq,ne,=,etc)
+* add highlight for jstl operation inside tags (and,or,<,>,eq,ne,=,etc)
 * ovverride html syntax color in normal html tag for nested tags/server var
