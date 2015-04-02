@@ -4,11 +4,12 @@ Update tags parameters and closing tags
 =======================================
 
 * add highlight for jstl operation inside tags (and,or,<,>,eq,ne,=,etc)
+* add highlight for jstl functions tags
+* add support for all base colore schema
 
 TODO
 ====
 
-* add highlight for jstl operation inside tags (and,or,<,>,eq,ne,=,etc)
 * ovverride html syntax color in normal html tag for nested tags/server var
 
 
