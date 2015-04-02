@@ -21,16 +21,34 @@
 		<!-- jstl (all) tags -->
 		<dict>
 			<key>name</key>
-			<string>support.constant.jsp</string>
+			<string>punctuation.section.directive.jsp,support.constant.jsp,keyword.jsp</string>
 			<key>match</key>
 			<string>(&lt;)(\/)([a-zA-Z0-9^\ ]*?)(:.*?)(&gt;)</string>
 		</dict>
 		<!-- jstl server variables-->
 		<dict>
+			<key>begin</key>
+			<string>\${</string>
+			<key>end</key>
+			<string>}</string>
 			<key>name</key>
 			<string>variable.parameter.jsp</string>
-			<key>match</key>
-			<string>\${.*?}</string>
+			<key>patterns</key>
+			<array>
+				<!-- jstl operation inside tag-->
+				<dict>
+					<key>name</key>
+					<string>keyword.jsp</string>
+					<key>match</key>
+					<string>(\ (and|or|not\ empty|empty|lt|gt|le|ge|eq|ne|\?|:|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|-|%)\ )|(==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|-|%)</string>
+				</dict>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.directive.jsp,support.constant.jsp,keyword.jsp</string>
+					<key>match</key>
+					<string>([a-zA-Z0-9]*?)(:)(.*?)(?=\()</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -38,20 +56,20 @@
 			<key>end</key>
 			<string>\/&gt;|&gt;</string>
 			<key>name</key>
-			<string>support.constant.jsp</string>
+			<string>punctuation.section.directive.jsp,support.constant.jsp</string>
 			<key>patterns</key>
 			<array>
 				<!-- jstl tags attributes-->
 				<dict>
 					<key>name</key>
-					<string>entity.other.inherited-class.jsp</string>
+					<string>constant.other.directive.attribute.jsp,entity.other.inherited-class.jsp</string>
 					<key>match</key>
 					<string>([a-zA-Z0-9-]*)(?=(=("|')))</string>
 				</dict>
 				<!-- jstl costant inside tags-->
 				<dict>
 					<key>name</key>
-					<string>string.jsp</string>
+					<string>keyword.operator.assignment.jsp</string>
 					<key>match</key>
 					<string>=</string>
 				</dict>
@@ -67,19 +85,30 @@
 					<array>
 						<!-- jstl operation inside tag-->
 						<dict>
+							<key>begin</key>
+							<string>\${</string>
+							<key>end</key>
+							<string>}</string>
 							<key>name</key>
 							<string>variable.parameter.jsp</string>
-							<key>match</key>
-							<string>\${.*?}</string>
+							<key>patterns</key>
+							<array>
+								<!-- jstl operation inside tag-->
+								<dict>
+									<key>name</key>
+									<string>keyword.jsp</string>
+									<key>match</key>
+									<string>(\ (and|or|not\ empty|empty|lt|gt|le|ge|eq|ne|\?|:|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|-|%)\ )|(==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|-|%)</string>
+								</dict>
+								<dict>
+									<key>name</key>
+									<string>keyword.jsp,support.constant.jsp</string>
+									<key>match</key>
+									<string>([a-zA-Z0-9]*?)(:)(.*?)(?=\()</string>
+								</dict>
+							</array>
 						</dict>
 					</array>
-				</dict>
-				<!-- jstl server variables-->
-				<dict>
-					<key>name</key>
-					<string>variable.parameter.jsp</string>
-					<key>match</key>
-					<string>\${.*?}</string>
 				</dict>
 			</array>
 		</dict>
