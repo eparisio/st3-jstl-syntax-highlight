@@ -19,3 +19,8 @@ Based on original Java Server Page(JSP) syntax highlight.
 * ~~review regex for highlight end-closing tag with parameter~~
 * ~~add highlight for jstl operation inside tags (and,or,<,>,eq,ne,=,etc)~~
 * ovverride html syntax color in normal html tag for nested tags/server var
+
+### Contribute
+
+If you want contribute follow the project at: 
+* https://github.com/eparisio/st3-jstl-syntax-highlight
