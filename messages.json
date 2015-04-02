@@ -1,4 +1,4 @@
 {
-	"install": "messages/install.txt",
+	"install": "README.md",
 	"2.0.0": "messages/2.0.0.txt"
 }
