@@ -5,7 +5,7 @@ Update tags parameters and closing tags
 
 * add highlight for jstl operation inside tags (and,or,<,>,eq,ne,=,etc)
 * add highlight for jstl functions tags
-* add support for all base colore schema
+* add compatibility for all base colore schema
 
 TODO
 ====
