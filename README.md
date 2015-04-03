@@ -8,11 +8,11 @@ Based on original Java Server Page(JSP) syntax highlight.
 * tag
 
 #### Installation
-###### Using Package Manager
+##### Using Package Manager
 
 The easiest way to install is to use the Package Control extension. Once this is installed, simply select 'Package Control: Install Package' from the command pallette and search for 'JSTL syntax'.
 
-###### Manually
+##### Manually
 
 Within Sublime Text, click Preferences > Browse Packages... and create a folder named JSTL. Clone this repo or add 'jstl.tmLanguage' file into the folder.
 
