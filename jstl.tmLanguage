@@ -40,7 +40,7 @@
 					<key>name</key>
 					<string>keyword.jsp</string>
 					<key>match</key>
-					<string>(\ (and|or|not\ empty|empty|lt|gt|le|ge|eq|ne|\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|-|%)\ )|(==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|-|%|&&)</string>
+					<string>(\ (and|or|not\ empty|empty|lt|gt|le|ge|eq|ne|\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%)\ )|(==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%)</string>
 				</dict>
 				<dict>
 					<key>name</key>
@@ -98,7 +98,7 @@
 									<key>name</key>
 									<string>keyword.jsp</string>
 									<key>match</key>
-									<string>(\ (and|or|not\ empty|empty|lt|gt|le|ge|eq|ne|\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|-|%)\ )|(==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|-|%|&&)</string>
+									<string>(\ (and|or|not\ empty|empty|lt|gt|le|ge|eq|ne|\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%)\ )|(==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%)</string>
 								</dict>
 								<dict>
 									<key>name</key>
