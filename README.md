@@ -22,6 +22,7 @@ Within Sublime Text, click Preferences > Browse Packages... and create a folder 
 * ~~review regex for highlight end-closing tag with parameter~~ - added support and internal text highlight
 * ~~add highlight for jstl operation inside tags (and,or,<,>,eq,ne,=,etc)~~  - add highlight for operator, add highlight for jstl functions
 * add highlight support for all base color scheme
+* add new jstl support with snippets and autocomplete at: https://github.com/eparisio/st3-jstl-snippet-autocomplete
 
 ### TO DO:
 * ~~add support for all jstl tag~~
