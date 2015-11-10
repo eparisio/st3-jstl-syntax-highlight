@@ -5,6 +5,7 @@ Update tags parameters and closing tags
 
 * add highlight for different wrote syntax and consegutive empty (and empty,or empty,or not empty,and !empty, etc...)
 * add highlight for '' encapsulated variable '${}'
+* add highlight for ( and )
 
 
 Contribute
