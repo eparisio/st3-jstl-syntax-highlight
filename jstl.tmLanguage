@@ -40,7 +40,7 @@
 					<key>name</key>
 					<string>keyword.jsp</string>
 					<key>match</key>
-					<string>(\ (and|or|not\ empty|empty|lt|gt|le|ge|eq|ne|\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%)\ )|(==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%)</string>
+					<string>( (and |or )(empty|not empty|\!empty) )|( (and|or|not empty|empty|\!empty|lt|gt|le|ge|eq|ne|\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%) )|(\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%)</string>
 				</dict>
 				<dict>
 					<key>name</key>
@@ -76,9 +76,9 @@
 				<!-- jstl text inside attributs-->
 				<dict>
 					<key>begin</key>
-					<string>"</string>
+					<string>"|'</string>
 					<key>end</key>
-					<string>"</string>
+					<string>"|'</string>
 					<key>name</key>
 					<string>string.jsp</string>
 					<key>patterns</key>
@@ -98,7 +98,7 @@
 									<key>name</key>
 									<string>keyword.jsp</string>
 									<key>match</key>
-									<string>(\ (and|or|not\ empty|empty|lt|gt|le|ge|eq|ne|\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%)\ )|(==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%)</string>
+									<string>( (and |or )(empty|not empty|\!empty) )|( (and|or|not empty|empty|\!empty|lt|gt|le|ge|eq|ne|\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%) )|(\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%)</string>
 								</dict>
 								<dict>
 									<key>name</key>

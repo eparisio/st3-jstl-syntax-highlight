@@ -1,0 +1,15 @@
+New features:
+
+Update tags parameters and closing tags
+=======================================
+
+* add highlight for different wrote syntax and consegutive empty (and empty,or empty,or not empty,and !empty, etc...)
+* add highlight for '' encapsulated variable '${}'
+
+
+Contribute
+==========
+
+If you want contribute or rise up some issues follow the project at: 
+
+	https://github.com/eparisio/st3-jstl-syntax-highlight
