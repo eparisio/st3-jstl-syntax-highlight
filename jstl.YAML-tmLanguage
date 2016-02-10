@@ -1,0 +1,59 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: JSTL
+scopeName: text.html.jstl
+fileTypes: [jstl,jsp,tag]
+uuid: 901c84d4-3446-42ed-b7c7-881e0cbf88d2
+
+patterns:
+# jstl part
+- comment: jstl (all) tags
+  name: punctuation.section.directive.jstl
+  match: '(&lt;)(\/)([a-zA-Z0-9^\ ]*?)(:.*?)(&gt;)'
+- comment: jstl server variables
+  # push: "Packages/HTML/HTML.sublime-syntax"
+  # with_prototype:
+  # - match: '\${'
+  #   push: punctuation.section.directive.jstl
+  name: variable.parameter.jstl
+  begin: '\${'
+  end: '}'
+  patterns:
+  - comment: elements inside variables
+    name: keyword.jstl
+    match: '( (and |or )(empty|not empty|\!empty) )|( (and|or|not empty|empty|\!empty|lt|gt|le|ge|eq|ne|\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%) )|(\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%|\)|\()'
+  - comment: elements inside variables
+    name: keyword.other.directive.jstl
+    match: '([a-zA-Z0-9]*?)(:)(.*?)(?=\()'
+- comment: jstl tags
+  name: punctuation.section.directive.jstl
+  begin: '(&lt;)([a-zA-Z0-9]*?)(:.*?)'
+  end: '\/&gt;|&gt;'
+  patterns:
+  - comment: jstl tags attributes
+    name: constant.other.directive.attribute.jstl
+    match: ([a-zA-Z0-9-]*)(?=(=("|')))
+  - comment:  jstl costant inside tags
+    name: keyword.operator.assignment.jstl
+    match: '='
+  - comment: jstl text inside attributs
+    name: string.jstl
+    begin: ("|')
+    end: ("|')
+    patterns:
+    - comment: jstl text inside attributs
+      name: variable.parameter.jstl
+      begin: '\${'
+      end: '}'
+      patterns:
+      - comment: elements inside variables
+        name: keyword.jstl
+        match: '( (and |or )(empty|not empty|\!empty) )|( (and|or|not empty|empty|\!empty|lt|gt|le|ge|eq|ne|\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%) )|(\?|:|&&|==|&gt;=|&lt;=|&gt;|&lt;|\!=|\!|\+|\\|\/|-|%|\)|\()'
+      - comment: elements inside variables
+        name: keyword.other.directive.jstl
+        match: '([a-zA-Z0-9]*?)(:)(.*?)(?=\()'
+# second part (original)
+- include: text.html.jsp
+- include: text.html.basic
+
+...
