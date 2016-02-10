@@ -1,6 +1,6 @@
 New features:
 
-Update tags parameters and closing tags
+Updates
 =======================================
 
 * add highlight for different wrote syntax and consegutive empty (and empty,or empty,or not empty,and !empty, etc...)
@@ -8,8 +8,16 @@ Update tags parameters and closing tags
 * add highlight for ( and )
 
 
+Other JSP/JSTL package
+=======================================
+
+ * jstl snippets and autocomplete (JSTL autocomplete)
+ 
+ 	https://github.com/eparisio/st3-jstl-snippet-autocomplete
+
+
 Contribute
-==========
+=======================================
 
 If you want contribute or rise up some issues follow the project at: 
 
