@@ -1,24 +1,20 @@
-New features:
+
 
 Updates
 =======================================
 
-* add highlight for different wrote syntax and consegutive empty (and empty,or empty,or not empty,and !empty, etc...)
-* add highlight for '' encapsulated variable '${}'
-* add highlight for ( and )
+* add highlight for inner HTML tag nested code!
+
+
 
 
 Other JSP/JSTL package
 =======================================
-
  * jstl snippets and autocomplete (JSTL autocomplete)
- 
  	https://github.com/eparisio/st3-jstl-snippet-autocomplete
-
 
 Contribute
 =======================================
-
 If you want contribute or rise up some issues follow the project at: 
 
 	https://github.com/eparisio/st3-jstl-syntax-highlight
