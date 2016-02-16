@@ -1,5 +1,5 @@
 # sublime text JSTL and JSP syntax highlight
-Basic support for sublime text jstl and jsp syntax highlight.
+Better support for sublime text jstl and jsp syntax highlight.
 
 Based on original Java Server Page(JSP) syntax highlight.
 
