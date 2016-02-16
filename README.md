@@ -21,7 +21,7 @@ Within Sublime Text, click Preferences > Browse Packages... and create a folder 
 * add highlight support for all base color scheme
 * ~~add support for all jstl tag~~ - added general regex for __jstl tags and custom tags__
 * ~~review regex for highlight end-closing tag with parameter~~ - added support and internal text highlight
-* ~~add highlight for jstl operation inside tags (and,or,<,>,eq,ne,=,etc)~~  - add highlight for operator, add highlight for jstl functions
+* ~~add highlight for jstl operation inside tags~~  - add highlight for operator, add highlight for jstl functions
 * ~~override html syntax color in normal html tag for nested tags/server var~~ - add highlight for nested tags and vars!
 
 * add new jstl support with snippets and autocomplete at: https://github.com/eparisio/st3-jstl-snippet-autocomplete
