@@ -175,6 +175,7 @@ repository:
     - include: '#ruby'
     - include: '#php'
     - include: '#python'
+    - include: '#embedded-jstl'
     - include: '#jstl-variable'
 
   entities:
@@ -371,7 +372,6 @@ repository:
     patterns:
     - include: '#embedded-code'
     - include: '#entities'
-    - include: '#embedded-jstl'
     
 
   string-single-quoted:
@@ -385,7 +385,6 @@ repository:
     patterns:
     - include: '#embedded-code'
     - include: '#entities'
-    - include: '#embedded-jstl'
 
   tag-generic-attribute:
     name: entity.other.attribute-name.html
