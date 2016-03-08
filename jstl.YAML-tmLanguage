@@ -205,10 +205,16 @@ repository:
       - comment:  jstl costant inside tags
         name: keyword.operator.assignment.jstl
         match: '='
-      - comment: jstl text inside attributs
-        name: string.jstl
-        begin: ("|')
-        end: ("|')
+      - comment: jstl text inside double quoted attributs
+        name: string.quoted.double.jstl
+        begin: (")
+        end: (")
+        patterns:
+        - include: '#jstl-variable'
+      - comment: jstl text inside double quoted attributs
+        name: string.quoted.single.jstl
+        begin: (')
+        end: (')
         patterns:
         - include: '#jstl-variable'
     # jsp part
@@ -311,10 +317,16 @@ repository:
      - comment:  jstl costant inside tags
        name: keyword.operator.assignment.jstl
        match: '='
-     - comment: jstl text inside attributs
+     - comment: jstl text inside double quoted attributs
+       name: string.quoted.double.jstl
+       begin: (")
+       end: (")
+       patterns:
+       - include: '#jstl-variable'
+     - comment: jstl text inside double quoted attributs
        name: string.quoted.single.jstl
-       begin: ("|')
-       end: ("|')
+       begin: (')
+       end: (')
        patterns:
        - include: '#jstl-variable'
 
