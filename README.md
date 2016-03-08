@@ -30,7 +30,7 @@ Within Sublime Text, click Preferences > Browse Packages... and create a folder 
 * ~~review regex for highlight end-closing tag with parameter~~
 * ~~add highlight for jstl operation inside tags (and,or,<,>,eq,ne,=,etc)~~
 * ~~override html syntax color in normal html tag for nested tags/server var~~
-* fix tag inside <script>
+* fix jstl tags inside Script tags
 
 ### Contribute
 
