@@ -3,7 +3,7 @@
 Updates
 =======================================
 
-* add highlight for inner HTML tag nested code!
+* fix bug for nested single/double quote!
 
 
 
