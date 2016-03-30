@@ -26,7 +26,7 @@ Within Sublime Text, click Preferences > Browse Packages... and create a folder 
 * add new jstl support with snippets and autocomplete at: https://github.com/eparisio/st3-jstl-snippet-autocomplete
 
 ### TO DO:
-* fix jstl tags inside HTML script tags, broking syntax
+
 
 ### Contribute
 
