@@ -115,6 +115,8 @@ patterns:
       end: \*/|(?=</[sS][cC][rR][iI][pP][tT])
       captures:
         '0': {name: punctuation.definition.comment.js}
+    - include: '#jstl'
+    - include: '#jstl-variable'
     - include: source.js
 
 - name: meta.tag.structure.any.html

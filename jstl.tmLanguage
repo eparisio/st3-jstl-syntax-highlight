@@ -367,6 +367,14 @@
 						</dict>
 						<dict>
 							<key>include</key>
+							<string>#jstl</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#jstl-variable</string>
+						</dict>
+						<dict>
+							<key>include</key>
 							<string>source.js</string>
 						</dict>
 					</array>

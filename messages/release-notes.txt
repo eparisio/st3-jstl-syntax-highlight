@@ -1,9 +1,8 @@
 
-
 Updates
 =======================================
 
-* add highlight for inner HTML tag nested code!
+* add highlight for tag nested in javascript code!
 
 
 
