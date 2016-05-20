@@ -40,7 +40,10 @@ patterns:
     '0': {name: punctuation.definition.comment.html}
   patterns:
   - name: invalid.illegal.bad-comments-or-CDATA.html
-    match: --
+    match: (\s)((?!(%--|--%))--\s)|(^)((?!(%--|--%))--\s)
+    captures:
+      '1': {name: comment.block.html}
+      '2': {name: invalid.illegal.bad-comments-or-CDATA.html}
   - include: '#embedded-code'
 
 - name: meta.tag.sgml.html
@@ -174,9 +177,9 @@ patterns:
 repository:
   embedded-code:
     patterns:
-    - include: '#ruby'
-    - include: '#php'
-    - include: '#python'
+    # - include: '#ruby'
+    # - include: '#php'
+    # - include: '#python'
     - include: '#embedded-jstl'
     - include: '#jstl-variable'
 
@@ -332,48 +335,48 @@ repository:
        patterns:
        - include: '#jstl-variable'
 
-  php:
-    begin: (?=(^\s*)?<\?)
-    end: (?!(^\s*)?<\?)
-    patterns:
-    - include: source.php
+  # php:
+  #   begin: (?=(^\s*)?<\?)
+  #   end: (?!(^\s*)?<\?)
+  #   patterns:
+  #   - include: source.php
 
-  python:
-    contentName: source.python.embedded.html
-    begin: (?:^\s*)<\?python(?!.*\?>)
-    end: \?>(?:\s*$\n)?
-    patterns:
-    - include: source.python
+  # python:
+  #   contentName: source.python.embedded.html
+  #   begin: (?:^\s*)<\?python(?!.*\?>)
+  #   end: \?>(?:\s*$\n)?
+  #   patterns:
+  #   - include: source.python
 
-  ruby:
-    patterns:
-    - name: comment.block.erb
-      begin: <%+#
-      end: '%>'
-      captures:
-        '0': {name: punctuation.definition.comment.erb}
-    - contentName: source.ruby.embedded.html
-      begin: <%+(?!>)=?
-      end: -?%>
-      captures:
-        '0': {name: punctuation.section.embedded.ruby}
-      patterns:
-      - name: comment.line.number-sign.ruby
-        match: (#).*?(?=-?%>)
-        captures:
-          '1': {name: punctuation.definition.comment.ruby}
-      - include: source.ruby
-    - contentName: source.ruby.nitro.embedded.html
-      begin: <\?r(?!>)=?
-      end: -?\?>
-      captures:
-        '0': {name: punctuation.section.embedded.ruby.nitro}
-      patterns:
-      - name: comment.line.number-sign.ruby.nitro
-        match: (#).*?(?=-?\?>)
-        captures:
-          '1': {name: punctuation.definition.comment.ruby.nitro}
-      - include: source.ruby
+  # ruby:
+  #   patterns:
+  #   - name: comment.block.erb
+  #     begin: <%+#
+  #     end: '%>'
+  #     captures:
+  #       '0': {name: punctuation.definition.comment.erb}
+  #   - contentName: source.ruby.embedded.html
+  #     begin: <%+(?!>)=?
+  #     end: -?%>
+  #     captures:
+  #       '0': {name: punctuation.section.embedded.ruby}
+  #     patterns:
+  #     - name: comment.line.number-sign.ruby
+  #       match: (#).*?(?=-?%>)
+  #       captures:
+  #         '1': {name: punctuation.definition.comment.ruby}
+  #     - include: source.ruby
+  #   - contentName: source.ruby.nitro.embedded.html
+  #     begin: <\?r(?!>)=?
+  #     end: -?\?>
+  #     captures:
+  #       '0': {name: punctuation.section.embedded.ruby.nitro}
+  #     patterns:
+  #     - name: comment.line.number-sign.ruby.nitro
+  #       match: (#).*?(?=-?\?>)
+  #       captures:
+  #         '1': {name: punctuation.definition.comment.ruby.nitro}
+  #     - include: source.ruby
 
   string-double-quoted:
     name: string.quoted.double.html
