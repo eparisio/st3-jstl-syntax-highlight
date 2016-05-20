@@ -563,6 +563,14 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#php</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#python</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#embedded-jstl</string>
 				</dict>
 				<dict>
@@ -1014,6 +1022,36 @@
 					<string>([a-zA-Z0-9]*?)(:)(.*?)(?=\()</string>
 					<key>name</key>
 					<string>keyword.jstl</string>
+				</dict>
+			</array>
+		</dict>
+		<key>php</key>
+		<dict>
+			<key>begin</key>
+			<string>(?=(^\s*)?&lt;\?)</string>
+			<key>end</key>
+			<string>(?!(^\s*)?&lt;\?)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.php</string>
+				</dict>
+			</array>
+		</dict>
+		<key>python</key>
+		<dict>
+			<key>begin</key>
+			<string>(?:^\s*)&lt;\?python(?!.*\?&gt;)</string>
+			<key>contentName</key>
+			<string>source.python.embedded.html</string>
+			<key>end</key>
+			<string>\?&gt;(?:\s*$\n)?</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.python</string>
 				</dict>
 			</array>
 		</dict>
