@@ -2,7 +2,8 @@
 Updates
 =======================================
 
-* add highlight for tag nested in javascript code!
+ * removed language reference for php ruby and phython.
+ * fix nested comment block
 
 
 
