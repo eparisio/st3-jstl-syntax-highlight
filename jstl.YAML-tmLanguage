@@ -178,8 +178,8 @@ repository:
   embedded-code:
     patterns:
     # - include: '#ruby'
-    # - include: '#php'
-    # - include: '#python'
+    - include: '#php'
+    - include: '#python'
     - include: '#embedded-jstl'
     - include: '#jstl-variable'
 
@@ -335,18 +335,18 @@ repository:
        patterns:
        - include: '#jstl-variable'
 
-  # php:
-  #   begin: (?=(^\s*)?<\?)
-  #   end: (?!(^\s*)?<\?)
-  #   patterns:
-  #   - include: source.php
+  php:
+    begin: (?=(^\s*)?<\?)
+    end: (?!(^\s*)?<\?)
+    patterns:
+    - include: source.php
 
-  # python:
-  #   contentName: source.python.embedded.html
-  #   begin: (?:^\s*)<\?python(?!.*\?>)
-  #   end: \?>(?:\s*$\n)?
-  #   patterns:
-  #   - include: source.python
+  python:
+    contentName: source.python.embedded.html
+    begin: (?:^\s*)<\?python(?!.*\?>)
+    end: \?>(?:\s*$\n)?
+    patterns:
+    - include: source.python
 
   # ruby:
   #   patterns:
