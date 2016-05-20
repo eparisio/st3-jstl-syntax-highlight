@@ -2,7 +2,7 @@
 Updates
 =======================================
 
- * removed language reference for php ruby and phython.
+ * commented language reference for ruby who break with jsp comments.
  * fix nested comment block
 
 
