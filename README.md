@@ -23,10 +23,11 @@ Within Sublime Text, click Preferences > Browse Packages... and create a folder 
 * added support and internal text highlight
 * add highlight for operator, add highlight for jstl functions
 * add highlight for nested tags and vars!
+* fix some compatibility with cross-language nesting
 * add new jstl support with snippets and autocomplete at: https://github.com/eparisio/st3-jstl-snippet-autocomplete
 
 ### TO DO:
- * fix some compatibility/regex with mixed nested language syntax
+ * fix other compatibility/regex with mixed nested language syntax
 
 ### Contribute
 
