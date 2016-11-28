@@ -214,7 +214,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?:^\s+)?(&lt;)((?i:style))\b(?![^&gt;]*/&gt;)</string>
+			<string>(?:^\s+)?(&lt;)(?i:style)\b(?![^&gt;]*/&gt;)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -286,6 +286,14 @@
 						</dict>
 						<dict>
 							<key>include</key>
+							<string>#jstl</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#jstl-variable</string>
+						</dict>
+						<dict>
+							<key>include</key>
 							<string>source.css</string>
 						</dict>
 					</array>
@@ -294,7 +302,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?:^\s+)?(&lt;)((?i:script))\b(?![^&gt;]*/&gt;)(?!.*type=["']text/(?:template|html)['"])</string>
+			<string>(?:^\s+)?(&lt;)((?i:script))\b(?![^&gt;]*/&gt;)(?!.*type=["'](text/(?:template|html|x-template))|(x-tmpl-mustache)['"])</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>

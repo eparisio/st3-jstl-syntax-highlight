@@ -69,7 +69,7 @@ patterns:
 - include: '#embedded-code'
 
 - name: meta.tag.style.html
-  begin: (?:^\s+)?(<)((?i:style))\b(?![^>]*/>)
+  begin: (?:^\s+)?(<)(?i:style)\b(?![^>]*/>)
   beginCaptures:
     '1': {name: punctuation.definition.tag.begin.html}
     '2': {name: entity.name.tag.style.html}
@@ -90,10 +90,12 @@ patterns:
       end: \*/|(?=</[sS][tT][yY][lL][eE])
       captures:
         '0': {name: punctuation.definition.comment.css}
+    - include: '#jstl'
+    - include: '#jstl-variable'
     - include: source.css
 
 - name: meta.tag.script.html
-  begin: (?:^\s+)?(<)((?i:script))\b(?![^>]*/>)(?!.*type=["']text/(?:template|html)['"])
+  begin: (?:^\s+)?(<)((?i:script))\b(?![^>]*/>)(?!.*type=["'](text/(?:template|html|x-template))|(x-tmpl-mustache)['"])
   beginCaptures:
     '1': {name: punctuation.definition.tag.begin.html}
     '2': {name: entity.name.tag.script.html}

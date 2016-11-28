@@ -2,8 +2,8 @@
 Updates
 =======================================
 
- * commented language reference for ruby who break with jsp comments.
- * fix nested comment block
+ * fix nested javascript tag (x-template type)
+ * fix nested style tag
 
 
 
