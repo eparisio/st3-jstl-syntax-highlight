@@ -2,8 +2,7 @@
 Updates
 =======================================
 
- * fix nested javascript tag (x-template type)
- * fix nested style tag
+ * fix nested style(css) tag
 
 
 

@@ -214,7 +214,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?:^\s+)?(&lt;)(?i:style)\b(?![^&gt;]*/&gt;)</string>
+			<string>(?:^\s+)?(&lt;)((?i:style))\b(?![^&gt;]*/&gt;)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -225,11 +225,11 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.tag.style.html</string>
+					<string>entity.name.tag.script.html</string>
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>(?&lt;=&lt;/(?:[sS][tT][yY][lL][eE]))(&gt;)(?:\s*\n)?</string>
+			<string>(?&lt;=&lt;/([sS][tT][yY][lL][eE]))(&gt;)(?:\s*\n)?</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>2</key>
@@ -254,12 +254,12 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.tag.begin.html</string>
+							<string>punctuation.definition.tag.end.html</string>
 						</dict>
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.tag.style.html</string>
+							<string>entity.name.tag.script.html</string>
 						</dict>
 					</dict>
 					<key>contentName</key>
@@ -268,6 +268,20 @@
 					<string>(&lt;/)((?i:style))</string>
 					<key>patterns</key>
 					<array>
+						<dict>
+							<key>captures</key>
+							<dict>
+								<key>1</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.comment.css</string>
+								</dict>
+							</dict>
+							<key>match</key>
+							<string>(//).*?((?=&lt;/[sS][tT][yY][lL][eE])|$\n?)</string>
+							<key>name</key>
+							<string>comment.line.double-slash.css</string>
+						</dict>
 						<dict>
 							<key>begin</key>
 							<string>/\*</string>

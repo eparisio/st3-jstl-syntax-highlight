@@ -69,11 +69,11 @@ patterns:
 - include: '#embedded-code'
 
 - name: meta.tag.style.html
-  begin: (?:^\s+)?(<)(?i:style)\b(?![^>]*/>)
+  begin: (?:^\s+)?(<)((?i:style))\b(?![^>]*/>)
   beginCaptures:
     '1': {name: punctuation.definition.tag.begin.html}
-    '2': {name: entity.name.tag.style.html}
-  end: (?<=</(?:[sS][tT][yY][lL][eE]))(>)(?:\s*\n)?
+    '2': {name: entity.name.tag.script.html}
+  end: (?<=</([sS][tT][yY][lL][eE]))(>)(?:\s*\n)?
   endCaptures:
     '2': {name: punctuation.definition.tag.html}
   patterns:
@@ -82,9 +82,13 @@ patterns:
     begin: (?<!</(?:[sS][tT][yY][lL][eE]))(>)
     end: (</)((?i:style))
     captures:
-      '1': {name: punctuation.definition.tag.begin.html}
-      '2': {name: entity.name.tag.style.html}
+      '1': {name: punctuation.definition.tag.end.html}
+      '2': {name: entity.name.tag.script.html}
     patterns:
+    - name: comment.line.double-slash.css
+      match: (//).*?((?=</[sS][tT][yY][lL][eE])|$\n?)
+      captures:
+        '1': {name: punctuation.definition.comment.css}
     - name: comment.block.css
       begin: /\*
       end: \*/|(?=</[sS][tT][yY][lL][eE])
