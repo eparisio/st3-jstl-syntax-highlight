@@ -287,17 +287,17 @@ repository:
         end: '(?=</jsp:scriptlet>|</jsp:expression>|</jsp:declaration>|%>|\{|\})|\n'
         patterns:
         - include: source.java
-      - begin: '{'
-        end: '}'
-        patterns:
-        - begin: '(</jsp:scriptlet>|</jsp:expression>|</jsp:declaration>)|(%>)'
-          captures:
-            '1': {name: meta.tag.block.jsp}
-            '2': {name: punctuation.section.embedded.jsp}
-          end: '(<jsp:scriptlet>|<jsp:expression>|<jsp:declaration>)|(<%[!=]?)'
-          patterns:
-          - include: text.html.jsp
-        - include: source.java
+      # - begin: '{'
+      #   end: '}'
+      #   patterns:
+      #   - begin: '(</jsp:scriptlet>|</jsp:expression>|</jsp:declaration>)|(%>)'
+      #     captures:
+      #       '1': {name: meta.tag.block.jsp}
+      #       '2': {name: punctuation.section.embedded.jsp}
+      #     end: '(<jsp:scriptlet>|<jsp:expression>|<jsp:declaration>)|(<%[!=]?)'
+      #     patterns:
+      #     - include: text.html.jsp
+      #   - include: source.java
       - include: source.java
 
   jstl-variable:
@@ -307,7 +307,7 @@ repository:
     patterns:
     - comment: elements inside variables
       name: keyword.jstl
-      match: '( (and |or )(empty|not empty|\!empty) )|( (and|or|not empty|empty|\!empty|lt|gt|le|ge|eq|ne|\?|:|&&|==|>=|<=|>|<|\!=|\!|\+|\\|\/|-|%) )|(\?|:|&&|==|>=|<=|>|<|\!=|\!|\+|\\|\/|-|%|\)|\()'
+      match: '( (and |or )(empty|not empty|\!empty) )|((empty|not empty|\!empty) )|( (and|or|not empty|empty|\!empty|lt|gt|le|ge|eq|ne|\?|:|&&|==|>=|<=|>|<|\!=|\!|\+|\\|\/|-|%) )|(\?|:|&&|==|>=|<=|>|<|\!=|\!|\+|\\|\/|-|%|\)|\()'
     - comment: elements inside variables
       name: keyword.jstl
       match: '([a-zA-Z0-9]*?)(:)(.*?)(?=\()'
