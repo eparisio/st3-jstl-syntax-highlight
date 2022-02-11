@@ -28,6 +28,7 @@ Within Sublime Text, click Preferences > Browse Packages... and create a folder 
 
 ### TO DO:
  * fix other compatibility/regex with mixed nested language syntax
+ * ## Add support for sublime text 4
 
 ### Contribute
 
