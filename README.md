@@ -3,20 +3,22 @@ Better support for sublime text jstl and jsp syntax highlight.
 
 Based on original Java Server Page(JSP) syntax highlight.
 
-#### File support
+**- not compatible with sublime text 4**
+
+### File support
 * jsp
 * tag
 
-#### Installation
-##### Using Package Manager
+### Installation
+#### Using Package Manager
 
 The easiest way to install is to use the Package Control extension. Once this is installed, simply select 'Package Control: Install Package' from the command pallette and search for 'JSTL syntax'.
 
-##### Manually
+#### Manually
 
 Within Sublime Text, click Preferences > Browse Packages... and create a folder named JSTL. Clone this repo or add 'jstl.tmLanguage' file into the folder.
 
-#### develop note:
+### develop note:
 * highlight __all__ jstl base tags(```<xxx:xxx>```), parameter in the tag(```xxx="```) and server variable(```${}```)
 * add highlight support for all base color scheme
 * added general regex for __jstl tags and custom tags__
@@ -28,7 +30,7 @@ Within Sublime Text, click Preferences > Browse Packages... and create a folder 
 
 ### TO DO:
  * fix other compatibility/regex with mixed nested language syntax
- * ## Add support for sublime text 4
+ * Add support for sublime text 4
 
 ### Contribute
 
